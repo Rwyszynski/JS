@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Zarejestruj się!</h1>
+        <div class="form">
+            <form>
+                <div class="form-box">
+                    <label for="name">Nazwa użytkownika:</label>
+                    <input type="text" class="name" placeholder="Podaj nazwę uzytkownika">
+                    <p class="user_error">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="password">Hasło:</label>
+                    <input type="password" class="pass" placeholder="Podaj hasło">
+                    <p class="user_error">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="password2">Powtórz hasło:</label>
+                    <input type="password" class="pass2" placeholder="Powtórz hasło">
+                    <p class="user_error">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" class="emaili" placeholder="Podaj adres mailowy">
+                    <p class="user_error">error</p>
+                </div>
+                <div class="but">
+                    <button id="clear">Wyczyść</button>
+                    <button class="send">Wyślij</button>
+                </div>
+                <div class="popup">
+                    <p>Formularz został poprawnie wysłany</p>
+                    <button class="close">Zamknij</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js.js"></script>
+</body>
+
+</html>
