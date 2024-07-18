@@ -7,47 +7,46 @@ sendBtn = document.querySelector('.send')
 error_text = document.querySelector('.error-text')
 popup = document.querySelector('.popup')
 
-
-const showError = (input, msg) => {
-    const par = input.parentElement;
-    // par.style.color = 'red';
-    const errorMsg = par.querySelector('.error-text')
-    // error_text.style.display = 'visible'
-    par.classList.add('error')
+const clear = (input) => {
+    const neks = input.nextElementSibling
+    neks.style.visibility = "hidden"
 }
 
+const empty = (input, msg) => {
+    if (input.value === '') {
+
+        const neks = input.nextElementSibling
+        neks.style.visibility = "visible"
+        neks.textContent = msg
 
 
-
-
-const checkForm = input => {
-    input.forEach(el => {
-        if (el.value === '') {
-
-            showError(el, el.placeholder)
-        }
-    })
-
+    } else {
+        clear(input)
+    }
 }
+
 
 sendBtn.addEventListener('click', e => {
-    e.preventDefault()
+    e.preventDefault();
 
-    checkForm([userName, pass, pass2, email])
+    [userName, pass, pass2, email].forEach(el => {
+        empty(el, el.placeholder)
+
+    });
+
+
 })
 
 
 
-
-const clear = e => {
+clearBtn.addEventListener('click', e => {
     e.preventDefault();
 
     [userName, pass, pass2, email].forEach(el => {
         el.value = ''
-    });
-}
-// 1. sprawdzenie czy wypełnione
-// 2. bład to pole jest puste
-// 3. skasuj błąd
+    })
+})
 
-clearBtn.addEventListener('click', clear)
+// 1.sprawdzanie czy wypeł
+// 2. to pole puste
+// 3. skasuj bład
