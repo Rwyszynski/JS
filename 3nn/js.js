@@ -7,9 +7,20 @@ sendBtn = document.querySelector('.send')
 error_text = document.querySelector('.error-text')
 popup = document.querySelector('.popup')
 
+
+const checkLength = (names, min) => {
+    if (names.value.length < min) {
+        const pum = names.parentElement
+        console.log(pum)
+        pum.classList.add('error');
+        const neks = names.nextElementSibling
+
+    }
+}
+
 const clear = (input) => {
     const neks = input.nextElementSibling
-    neks.style.visibility = "hidden"
+
 }
 
 const empty = (input, msg) => {
@@ -34,7 +45,7 @@ sendBtn.addEventListener('click', e => {
 
     });
 
-
+    checkLength(userName, 3)
 })
 
 
