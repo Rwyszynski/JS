@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcbd0e264b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="add">
+            <p class="name">todo list</p>
+            <input type="text" class="input" placeholder="Wpisz treść zadania:">
+            <button class="add-button">add</button>
+        </div>
+        <div class="liste">
+            <p class="list">Lista zadań:</p>
+            <p class="error">Brak zadań</p>
+            <ul class="list-todo">
+                <li class="task">test <div class="but">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+
+                </li>
+                <li class="task">test2 <div class="but">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="popup">
+        <p class="nwm">Edytuj zadanie:</p>
+        <input type="text" placeholder="test">
+        <button class="agree">Zatwierdź</button>
+        <button class="cancel">Anuluj</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
