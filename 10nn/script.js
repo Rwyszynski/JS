@@ -13,29 +13,34 @@ let $addPopupBtn; // przycisk "zatwierdź" w popup'ie
 let $closeTodoBtn //przycisk od zamykania popup'a
 
 const main = () => {
-    prepareDOMElements();
-    prepareDOMEvents();
+    prepareDOMElements()
+    prepareDOMEvents()
 }
 
+
 const prepareDOMElements = () => {
-    $todoInput = document.querySelector('.todo-input');
-    $alertInfo = document.querySelector('.alert-info');
-    $addBtn = document.querySelector('.add-btn');
-    $ulList = document.querySelector('.todo-list ul');
-    $allTasks = document.getElementsByTagName('li');
-    $popup = document.querySelector('.popup');
-    $popupInfo = document.querySelector('.popup-info');
-    $popupInput = document.querySelector('.popup-input');
-    $addPopupBtn = document.querySelector('.accept');
-    $closeTodoBtn = document.querySelector('.cancel');
+    $todoInput = document.querySelector('.todo-input')
+    $alertInfo = document.querySelector('.error-info')
+    $addBtn = document.querySelector('.add-btn')
+    $ulList = document.querySelector('.todo-list ul')
 }
 
 const prepareDOMEvents = () => {
-    $addBtn.addEventListener('click', addNewTask);
+    $addBtn.addEventListener('click', addNewTask)
 }
 
 const addNewTask = () => {
-    console.log('ok');
+    if ($todoInput.value !== '') {
+        newTask = document.createElement('li')
+        newTask.textContent = $todoInput.value
+        $ulList.append(newTask)
+        $todoInput.value = ''
+
+    } else {
+        $alertInfo.textContent = 'Podaj wartość'
+        console.log('nie OK')
+    }
 }
 
-document.addEventListener('DOMContentLoaded', main);
+
+document.addEventListener('DOMContentLoaded', main)
